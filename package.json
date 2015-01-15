@@ -1,0 +1,10 @@
+{
+  "name": "nodejs-es6-bower-gulp-runtime",
+  "version": "0.0.0",
+  "description": "Demo node app for the nodejs-es6-bower-gulp-runtime Docker image",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": ""
+}
