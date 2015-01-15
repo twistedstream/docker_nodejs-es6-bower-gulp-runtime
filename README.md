@@ -1,6 +1,6 @@
 # Node.js (ES6) + Bower/Gulp Runtime Docker image
 
-This Docker image is essentially the same thing as [dockerfile/nodejs-bower-gulp-runtime](/dockerfile/nodejs-bower-gulp-runtime), with the following changes:
+This Docker image is essentially the same thing as [dockerfile/nodejs-bower-gulp-runtime](https://registry.hub.docker.com/u/dockerfile/nodejs-bower-gulp-runtime/), with the following changes:
 
 - It's running Node v0.11 so Harmony (ES6) scripts can be executed (ex: [Koa](http://koajs.com/))
 - It copies over a `.bowerrc` file (if it exists) before running `bower install`
@@ -22,7 +22,7 @@ This Docker image is essentially the same thing as [dockerfile/nodejs-bower-gulp
 
 This image assumes that your application:
 
-* has a file named [package.json](https://www.npmjs.org/doc/json.html) listing its dependencies.
+* has a file named [package.json](https://docs.npmjs.com/files/package.json) listing its dependencies.
 * has a file named [bower.json](http://bower.io/docs/creating-packages/) listing its dependencies.
 * might have a file named `.bowerrc` specifying Bower configuration.
 * has a file named [Gulpfile.js](https://github.com/gulpjs/gulp/blob/master/README.md) registering `build` task.
