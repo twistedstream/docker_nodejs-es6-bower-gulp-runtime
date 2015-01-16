@@ -4,6 +4,7 @@ This Docker image is essentially the same thing as [dockerfile/nodejs-bower-gulp
 
 - It's running Node v0.11 so Harmony (ES6) scripts can be executed (ex: [Koa](http://koajs.com/))
 - It copies over a `.bowerrc` file (if it exists) before running `bower install`
+- It runs the default Gulp task instead of one called `build`
 - It passes the exposed port (`8080`) to the node process via the `PORT` env variable.
 
 ### Base Docker Image
@@ -25,7 +26,7 @@ This image assumes that your application:
 * has a file named [package.json](https://docs.npmjs.com/files/package.json) listing its dependencies.
 * has a file named [bower.json](http://bower.io/docs/creating-packages/) listing its dependencies.
 * might have a file named `.bowerrc` specifying Bower configuration.
-* has a file named [Gulpfile.js](https://github.com/gulpjs/gulp/blob/master/README.md) registering `build` task.
+* has a file named [Gulpfile.js](https://github.com/gulpjs/gulp/blob/master/README.md) with a `default` task.
 * has a file named `server.js` as the entrypoint script or define in package.json the attribute: `"scripts": {"start": "node <entrypoint_script_js>"}`
 * listens on port `8080` or uses the port passed by the `PORT` env variable.
 
