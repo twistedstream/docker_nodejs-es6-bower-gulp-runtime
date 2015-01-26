@@ -11,7 +11,7 @@ ONBUILD RUN npm install
 ONBUILD ADD bower.json .bowerrc /app/
 ONBUILD RUN bower install --allow-root
 ONBUILD ADD . /app
-ONBUILD RUN gulp
+ONBUILD RUN gulp build
 
 # Define working directory.
 WORKDIR /app
